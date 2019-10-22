@@ -1,6 +1,8 @@
 @import vars
 @import fonts
 @import libs
+@import helpers
+@import contact
 
 ::placeholder
 	color: #666
@@ -477,9 +479,10 @@ h1, h2, h3, h4, h5, h6
     background-color: #fff
     position: relative
     overflow: auto
+    &--sm
+      max-width: 900px
     .modal__close
-      width: 34px
-      height: 34px
+
       position: absolute
       top: .9rem
       right: .9rem
@@ -510,7 +513,7 @@ h1, h2, h3, h4, h5, h6
         .modal__work-header
           margin-bottom: 33px
           .modal__work-title
-            font-size: 32px
+            font-size: 25px
             font-weight: 700
             text-transform: uppercase
             color: $black
@@ -562,6 +565,129 @@ h1, h2, h3, h4, h5, h6
             img
               margin-bottom: 2px
 
+
+/* Modals windows 2 */
+
+.modal__content
+  padding: 75px 15px
+  position: relative
+  .modal__title
+    text-transform: uppercase
+    color: $black
+    font-weight: 700
+    font-size: 45px
+    margin-bottom: 45px
+
+  .text__center
+    text-align: center
+    right: 50px
+    .button
+      float: none
+      display: initial
+    .thin
+      background: $black
+      color: #fff
+      padding: 8px 50px
+
+  .timeline
+    margin: 63px  auto
+    display: flex
+    width: 100%
+    max-width: 768px
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      display: block
+      width: 1px
+      height: 100%
+      background-color: $black
+      top: 0
+      left: 50%
+      z-index: 1
+    .timeline__span
+      color: red
+
+    .timeline__col
+      width: 50%
+      &--left
+        text-align: right
+        padding-right: 48px
+      &--right
+        padding-left: 48px
+
+      .timeline__title
+        font-size: 18px
+        color: $black
+        text-transform: uppercase
+        font-weight: 700
+        margin-bottom: 27px
+
+      .timeline__item
+        margin-bottom: 38px
+        text-transform: uppercase
+        &:last-child
+          margin-bottom: 0
+          margin-top: 35px
+        &--skills
+          margin-top: 35px
+          .timeline__text--skills
+            line-height: 21px
+        .timeline__date
+          display: block
+          text-decoration: underline
+          font-size: 16px
+          margin-bottom: 12px
+        .timeline__subtitle
+          font-size: 16px
+          font-weight: 700
+          margin-bottom: 5px
+          &--sub
+            margin-bottom: 8px
+        .timeline__text
+          font-size: 14px
+          &--letter
+            line-height: 20px
+        .timeline__text--title
+          text-transform: none
+        .timeline__text--button
+          .timeline__text--link
+            text-decoration: none
+            color: red
+            transition: transform .2s linear
+            &:hover
+              color: green
+              transition: color .40s ease
+      .progress-bar
+        margin-bottom: 15px
+        .progress-bar__item
+          display: flex
+          align-items: center
+          margin-bottom: 5px
+          justify-content: space-between
+          .progress-bar__left
+            .progress-bar__title
+              font-size: 14px
+              font-weight: 300
+          .progress-bar__right
+            padding-left: 18px
+            .progress-bar__bar
+              width: 139px
+              height: 6px
+              background-color: #96c6ef
+              .progress-bar__progress
+                height: 100%
+                background-color: $gray
+                transition: width .2s linear
+               
+
+
+
+
+
+
+
+      
 
 
 
