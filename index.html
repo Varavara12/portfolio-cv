@@ -10,7 +10,7 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="icon" href="img/favicon.png">
+	<link rel="icon" href="img/user.png">
 	<meta property="og:image" content="img/@1x/preview.jpg">
 	
 	<link rel="stylesheet" href="css/styles.min.css">
@@ -19,7 +19,7 @@
 
 </head>
 
-<body class="no-scrool">
+<body>
 <!-- Header -->
     <header class="header">
 
@@ -34,13 +34,18 @@
                         <div class="user__prof">Front-End</div>
                     </div>
                 </div>
-                <div class="nav">
+                <nav class="nav">
                     <a class="nav__link" href="#">WORK</a>
                     <a class="nav__link" href="#">ABOUT ME</a>
                     <a class="nav__link" href="#">BLOG</a>
                     <a class="nav__link" href="#">CONTACT</a>
-                    <a class="button button--moema button--text-thick button--text-upper button--size-s" href="#">HIRE ME</a>
+                    <a class="button button--moema button--text-thick button--text-upper button--size-s" href="#" data-modal="#modal_hire_me">HIRE ME</a>
+                </nav>
+
+                <div class="burger">
+                    <img class="burger__icon" src="img/menu.svg" alt="menu">
                 </div>
+
             </div>
         </div>
 
@@ -61,8 +66,8 @@
                         <a href="https://www.instagram.com/vitalikkropotkin/?hl=ru" target="_blank" class="social__link"><img src="img/social/instagram.svg" alt=""></a>
                         <a href="https://vk.com/vitalik_pro" target="_blank" class="social__link"><img src="img/social/vk.svg" alt=""></a>
                     </div>
-                    <div class="btr"> <a class="button button--moema button--text-thick button--text-upper button--size-s btr" href="#">HIRE ME</a></div>
-                    <div class="btn"><a class="button button--moema button--text-thick button--text-upper button--size-s btr" href="#">SEE MY RESUME</a></div>
+                    <div class="btr"> <a class="button button--moema button--text-thick button--text-upper button--size-s btr" href="#" data-modal="#modal_hire_me">HIRE ME</a></div>
+                    <div class="btn"><a class="button button--moema button--text-thick button--text-upper button--size-s btr" href="#" data-modal="#modal_resume">SEE MY RESUME</a></div>
                 </div>
 
                 <img class="intro__photo" src="img/user.png" alt="аватарка">
@@ -79,15 +84,24 @@
     </section>
 
 <!-- Work -->
-    <div class="works">
-        <div class="container">
-            <div class="project">
+<div class="works">
+    <div class="container">
+
+        <div class="work__nav">
+            <a href="#" class="work__nav-link" data-filter="all">All</a>
+            <a href="#" class="work__nav-link" data-filter="adaptive">Adaptive</a>
+            <a href="#" class="work__nav-link" data-filter="desktop" >Desktop</a>
+        </div>
+
+        <div class="project">
             <h1 data-text="MY PROJECT">MY PROJECT</h1>
         </div>
-            <div class="portfolio">
-                <div class="portfolio__col">
-                <div class="work">
-                    <div class="shadow"><a class="work__img" href="https://stekloduvmaster.000webhostapp.com"><img class="img" src="img/work.jpg" alt=""></a></div>
+        <div class="portfolio">
+            <div class="portfolio__col" data-cat="adaptive">
+                <div class="work" data-modal="#modal_project_1">
+                    <div class="shadow">
+                        <a class="work__img" href="https://stekloduvmaster.000webhostapp.com"><img class="img" src="img/work.jpg" alt=""></a>
+                    </div>
                     <div class="work_content">
                         <div class="work__title">
                             PROJECT MASTERSKAYA-STECLODUV
@@ -96,63 +110,73 @@
                 </div>
             </div>
 
-                <div class="portfolio__col">
-                    <div class="work">
-                        <div class="shadow"><a class="work__img" href="https://stekloduvmaster.000webhostapp.com"><img class="img" src="img/work.jpg" alt=""></a></div>
-                        <div class="work_content">
-                            <div class="work__title">
-                                PROJECT MASTERSKAYA-STECLODUV
-                            </div>
+            <div class="portfolio__col" data-cat="adaptive">
+                <div class="work" data-modal="#modal_project_2">
+                    <div class="shadow">
+                        <a class="work__img" href="https://stekloduvmaster.000webhostapp.com"><img class="img" src="img/work.jpg" alt=""></a>
+                    </div>
+                    <div class="work_content">
+                        <div class="work__title">
+                            PROJECT NUM2
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="portfolio__col">
-                    <div class="work">
-                        <div class="shadow"><a class="work__img" href="https://stekloduvmaster.000webhostapp.com"><img class="img" src="img/work.jpg" alt=""></a></div>
-                        <div class="work_content">
-                            <div class="work__title">
-                                PROJECT MASTERSKAYA-STECLODUV
-                            </div>
+            <div class="portfolio__col" data-cat="desktop">
+                <div class="work">
+                    <div class="shadow">
+                        <a class="work__img" href="https://stekloduvmaster.000webhostapp.com"><img class="img" src="img/work.jpg" alt=""></a>
+                    </div>
+                    <div class="work_content">
+                        <div class="work__title">
+                            PROJECT NUM3
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="portfolio__col">
-                    <div class="work">
-                        <div class="shadow"><a class="work__img" href="https://stekloduvmaster.000webhostapp.com"><img class="img" src="img/work.jpg" alt=""></a></div>
-                        <div class="work_content">
-                            <div class="work__title">
-                                PROJECT MASTERSKAYA-STECLODUV
-                            </div>
+            <div class="portfolio__col" data-cat="adaptive">
+                <div class="work">
+                    <div class="shadow">
+                        <a class="work__img" href="https://stekloduvmaster.000webhostapp.com"><img class="img" src="img/work.jpg" alt=""></a>
+                    </div>
+                    <div class="work_content">
+                        <div class="work__title">
+                            PROJECT NUM4
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="portfolio__col">
-                    <div class="work">
-                        <div class="shadow"><a class="work__img" href="https://stekloduvmaster.000webhostapp.com"><img class="img" src="img/work.jpg" alt=""></a></div>
-                        <div class="work_content">
-                            <div class="work__title">
-                                PROJECT MASTERSKAYA-STECLODUV
-                            </div>
+            <div class="portfolio__col" data-cat="desktop">
+                <div class="work">
+                    <div class="shadow">
+                        <a class="work__img" href="https://stekloduvmaster.000webhostapp.com"><img class="img" src="img/work.jpg" alt=""></a>
+                    </div>
+                    <div class="work_content">
+                        <div class="work__title">
+                            PROJECT NUM5
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="portfolio__col">
-                    <div class="work">
-                        <div class="shadow"><a class="work__img" href="https://stekloduvmaster.000webhostapp.com"><img class="img" src="img/work.jpg" alt=""></a></div>
-                        <div class="work_content">
-                            <div class="work__title">
-                                PROJECT MASTERSKAYA-STECLODUV
-                            </div>
+            <div class="portfolio__col" data-cat="adaptive">
+                <div class="work">
+                    <div class="shadow">
+                        <a class="work__img" href="https://stekloduvmaster.000webhostapp.com"><img class="img" src="img/work.jpg" alt=""></a>
+                    </div>
+                    <div class="work_content">
+                        <div class="work__title">
+                            PROJECT NUM6
                         </div>
                     </div>
                 </div>
-            </div> <!-- Portfolio -->
-        </div> <!-- Container -->
-    </div> <!-- Works -->
+            </div>
+        </div> <!-- Portfolio -->
+    </div> <!-- Container -->
+</div> <!-- Works -->
 
 <!-- About-->
 <section class="about">
@@ -177,12 +201,17 @@
                     <p>
                         Good day colleagues!)
                         In a nutshell about my self: I like to think, study and communicate, work
-                        hard and with pleasure. In response, I am waiting for interesting projects, worthy of payment and the opportunity for professional growth.
+                        hard and with pleasure. In response, I am waiting for interesting projects, worthy of payment
+                        and the opportunity for professional growth.
                         Call me to discuss in more detail and I hope to see you at the interview.
                     </p>
                 </div>
-                <div class="btr"> <a class="button button--moema button--text-thick button--text-upper button--size-s btr" href="#">HIRE ME</a></div>
-                <div class="btn"><a class="button button--moema button--text-thick button--text-upper button--size-s btr" href="#">SEE MY RESUME</a></div>
+                <div class="btr">
+                    <a class="button button--moema button--text-thick button--text-upper button--size-s btr" href="#" data-modal="#modal_hire_me">HIRE ME</a>
+                </div>
+                <div class="btn">
+                    <a class="button button--moema button--text-thick button--text-upper button--size-s btr" href="#" data-modal="#modal_resume">SEE MY RESUME</a>
+                </div>
 
             </div> <!-- about__content -->
         </div> <!-- about__inner -->
@@ -231,7 +260,7 @@
                 <a href="#" class="footer__nav-link">About me</a>
                 <a href="#" class="footer__nav-link">Blog</a>
                 <a href="#" class="footer__nav-link">Contact</a>
-                <a class="button button--moema button--text-thick button--text-upper button--size-s" href="#">HIRE ME</a>
+                <a class="button button--moema button--text-thick button--text-upper button--size-s" href="#" data-modal="#modal_hire_me">HIRE ME</a>
             </div>
         </div> <!-- footer__inner -->
     </div>
@@ -240,16 +269,29 @@
 
 <!-- Modals -->
 
-<div class="modal" style="display: none">
+<div class="modal" id="modal_project_1">
     <div class="modal__dialog">
-        <button class="modal__close" type="button">
+        <button class="modal__close" type="button" data-close>
             <img src="img/close.svg" alt="Close">
         </button>
 
         <div class="modal__work">
 
             <div class="modal__work-preview">
-                <img class="modal__work-photo" src="img/modals/modal__work-photo.jpg" alt="">
+                <div data-slider="slick">
+                    <div>
+                        <img class="modal__work-photo" src="img/modals/modal__work-photo.jpg" alt="">
+                    </div>
+
+                    <div>
+                        <img class="modal__work-photo" src="img/modals/modal__work-photo-1.jpg" alt="">
+                    </div>
+
+                    <div>
+                        <img class="modal__work-photo" src="img/modals/modal__work-photo-2.jpg" alt="">
+                    </div>
+
+                </div>
             </div>
 
             <div class="modal__work-content">
@@ -268,19 +310,93 @@
 
                 <div class="modal__work-text">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus doloremque dolorum incidunt omnis quod quos, sed? Aut delectus itaque magni perspiciatis, sapiente tempora ullam veniam? Ab adipisci alias distinctio facilis labore laborum mollitia odio, pariatur, quae qui sequi, unde velit vitae? Ab consequatur eius esse illum incidunt quisquam ullam ut.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus doloremque dolorum incidunt
+                        omnis quod quos, sed? Aut delectus itaque magni perspiciatis, sapiente tempora ullam veniam? Ab
+                        adipisci alias distinctio facilis labore laborum mollitia odio, pariatur, quae qui sequi, unde
+                        velit vitae? Ab consequatur eius esse illum incidunt quisquam ullam ut.
                     </p>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus doloremque dolorum incidunt omnis quod quos, sed? Aut delectus itaque magni perspiciatis, sapiente tempora ullam veniam? Ab adipisci alias
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus doloremque dolorum incidunt
+                        omnis quod quos, sed? Aut delectus itaque magni perspiciatis, sapiente tempora ullam veniam? Ab
+                        adipisci alias
+                    </p>
+                </div>
+
+                <div class="modal__work-btn">
+                    <a class="button button--moema button--text-thick button--text-upper button--size-s btr" href="https://stekloduvmaster.000webhostapp.com" target="_blank">OPEN PROJECT</a>
+                </div>
+
+                <div class="modal__work-footer">
+                    <button class="modal__work-btn modal__btn-prev slickPrev" type="button">
+                        <img src="img/back.svg" height="14" alt="back">
+                        Previous
+                    </button>
+                    <button class="modal__work-btn modal__btn-next slickNext" type="button">
+                        Next
+                        <img src="img/next.svg" height="14" alt="next">
+                    </button>
+                </div>
+
+            </div> <!-- modal__work-content -->
+        </div> <!-- modal__work -->
+
+    </div><!-- modal__dialog -->
+</div>
+
+<div class="modal" id="modal_project_2">
+    <div class="modal__dialog">
+        <button class="modal__close" type="button" data-close>
+            <img src="img/close.svg" alt="Close">
+        </button>
+
+        <div class="modal__work">
+
+            <div class="modal__work-preview">
+                <div data-slider="slick">
+                    <div>
+                        <img class="modal__work-photo" src="img/modals/modal__work-photo.jpg" alt="">
+                    </div>
+
+                    <div>
+                        <img class="modal__work-photo" src="img/modals/modal__work-photo-1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal__work-content">
+
+                <div class="modal__work-header">
+                    <h3 class="modal__work-title">Test</h3>
+                    <div class="modal__work-info">
+                        CATEGORY <span class="modal__work-info-divider">|</span> 2019
+                    </div>
+                </div>
+
+                <div class="modal__work-author">
+                    <div class="modal__work-author__title">Author:</div>
+                    <div class="modal__work-author__company">Kropotkin Vitalii</div>
+                </div>
+
+                <div class="modal__work-text">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus doloremque dolorum incidunt
+                        omnis quod quos, sed? Aut delectus itaque magni perspiciatis, sapiente tempora ullam veniam? Ab
+                        adipisci alias distinctio facilis labore laborum mollitia odio, pariatur, quae qui sequi, unde
+                        velit vitae? Ab consequatur eius esse illum incidunt quisquam ullam ut.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus doloremque dolorum incidunt
+                        omnis quod quos, sed? Aut delectus itaque magni perspiciatis, sapiente tempora ullam veniam? Ab
+                        adipisci alias
                     </p>
                 </div>
 
                 <div class="modal__work-footer">
-                    <button class="modal__work-btn modal__btn-prev" type="button">
+                    <button class="modal__work-btn modal__btn-prev slickPrev" type="button">
                         <img src="img/back.svg" height="14" alt="back">
                         Previous
                     </button>
-                    <button class="modal__work-btn modal__btn-next" type="button">
+                    <button class="modal__work-btn modal__btn-next slickNext" type="button">
                         Next
                         <img src="img/next.svg" height="14" alt="next">
                     </button>
@@ -293,20 +409,21 @@
 </div>
 
 
-<div class="modal" style="display: none">
+<div class="modal" id="modal_resume" >
     <div class="modal__dialog">
-        <button class="modal__close" type="button">
+        <button class="modal__close" type="button" data-close>
             <img src="img/close.svg" alt="Close">
         </button>
-       <div class="modal__content">
-           <h3 class="modal__title text-center">RESUME</h3>
+        <div class="modal__content">
+            <h3 class="modal__title text-center">RESUME</h3>
 
-           <div class="text__center">
-             <a class="button button--moema button--text-thick button--text-upper button--size-s btr" href="#">DOWNLOAD PDF</a>
-             <a class="button button--moema button--text-thick button--text-upper button--size-s btr thin" href="#">PRINT</a>
-           </div>
+            <div class="text__center">
+                <a class="button button--moema button--text-thick button--text-upper button--size-s btr" href="#">DOWNLOAD
+                    PDF</a>
+                <a class="button button--moema button--text-thick button--text-upper button--size-s btr thin" href="#">PRINT</a>
+            </div>
 
-           <div class="timeline">
+            <div class="timeline">
                 <div class="timeline__col timeline__col--left">
                     <h4 class="timeline__title">SKILLS</h4>
 
@@ -363,7 +480,7 @@
                         </div>
                         <div class="timeline__text--title">
                             <p>
-                                Mostly I use  JAVASCRIPT, JQUERY, BOOTSTRAP  in my work
+                                Mostly I use JAVASCRIPT, JQUERY, BOOTSTRAP in my work
                             </p>
                         </div>
                     </div>
@@ -381,7 +498,7 @@
                         </div>
                         <div class="timeline__text--title">
                             <p>
-                                Mostly I use GitHub  in my work
+                                Mostly I use GitHub in my work
                             </p>
                         </div>
                     </div>
@@ -399,7 +516,7 @@
                         </div>
                         <div class="timeline__text--title">
                             <p>
-                                Mostly I use Gulp  in my work
+                                Mostly I use Gulp in my work
                             </p>
                         </div>
                     </div>
@@ -416,7 +533,7 @@
                         </div>
                         <div class="timeline__text--title">
                             <p>
-                                Mostly I use WebStorm  in my work
+                                Mostly I use WebStorm in my work
                             </p>
                         </div>
                     </div>
@@ -474,17 +591,17 @@
                         </div><!-- progress-bar__item -->
 
                         <div class="progress-bar__item">
-                        <div class="progress-bar__left">
-                            <div class="progress-bar__title">CorelDraw</div>
-                        </div>
-                        <div class="progress-bar__right">
-                            <div class="progress-bar__bar">
-                                <div class="progress-bar__progress" style="width: 75%;">
+                            <div class="progress-bar__left">
+                                <div class="progress-bar__title">CorelDraw</div>
+                            </div>
+                            <div class="progress-bar__right">
+                                <div class="progress-bar__bar">
+                                    <div class="progress-bar__progress" style="width: 75%;">
 
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div><!-- progress-bar__item -->
+                        </div><!-- progress-bar__item -->
 
                         <div class="progress-bar__item">
                             <div class="progress-bar__left">
@@ -568,10 +685,12 @@
                             <p class="timeline__text--skills">
                                 adaptive, cross-browser layout- <br>
                                 Code optimization-<br>
-                                Created architecture and content of websites-<span class="timeline__span">-beginner--</span> <br>
+                                Created architecture and content of websites-<span
+                                    class="timeline__span">-beginner--</span> <br>
                                 Website and domain transfers-<br>
                                 use sprites in css-<br>
-                                Ability to understand someone else's code-<span class="timeline__span">-beginner--</span><br>
+                                Ability to understand someone else's code-<span
+                                    class="timeline__span">-beginner--</span><br>
                                 Connection of non-standard fonts-<br>
                                 Block the fixed / liquid layouts-<br>
                                 BEM methodology-<br>
@@ -596,51 +715,68 @@
                         <div class="timeline__text timeline__text--letter">
                             <p>
                                 I am a huge fan of IT and programming. Currently, I'm studying JavaScript and
-                                programming in general. I'm friendly, non-conflictual person and a good team player.  I'm searching trainee/junior position and I have a great desire to grow my skills in a professional
-                                way. In my spare time, I like to read literature for professional and personal development, and programming on Arduino
+                                programming in general. I'm friendly, non-conflictual person and a good team player. I'm
+                                searching trainee/junior position and I have a great desire to grow my skills in a
+                                professional
+                                way. In my spare time, I like to read literature for professional and personal
+                                development, and programming on Arduino
                             </p>
                         </div>
                     </div>
 
 
                 </div><!-- timeline__col timeline__col--right -->
-           </div> <!-- timeline -->
+            </div> <!-- timeline -->
 
-       </div> <!-- modal__content -->
+        </div> <!-- modal__content -->
     </div><!-- modal__dialog -->
 </div> <!-- modal -->
 
 
-<div class="modal" >
+<div class="modal" id="modal_hire_me" >
     <div class="modal__dialog modal__dialog--sm">
-        <button class="modal__close" type="button">
+        <button class="modal__close" type="button" data-close>
             <img src="img/close.svg" alt="Close">
         </button>
 
-            <div class="contact">
-                <div class="contact__left">
-                    <h3 class="modal__title modal__title--big">LET'S TALK!</h3>
-                    <div class="modal__subtitle">CALL ME OR SEND ME A REQUEST</div>
+        <div class="contact">
+            <div class="contact__left">
+                <h3 class="modal__title modal__title--big">LET'S TALK!</h3>
+                <div class="modal__subtitle">CALL ME OR SEND ME A REQUEST</div>
 
-                    <ul class="contact__info">
-                        <li class="contact__info-item">
-                            <img class="contact__info-icon" src="img/call.svg" alt="">
-                            +380635792739
-                        </li>
-                        <li class="contact__info-item">
-                            <img class="contact__info-icon" src="img/mail.svg" alt="">
-                             narodnyjpikap@gmail.com
-                        </li>
-                    </ul>
+                <ul class="contact__info">
+                    <li class="contact__info-item">
+                        <img class="contact__info-icon" src="img/call.svg" alt="">
+                        +380635792739
+                    </li>
+                    <li class="contact__info-item">
+                        <img class="contact__info-icon" src="img/mail.svg" alt="">
+                        narodnyjpikap@gmail.com
+                    </li>
+                </ul>
 
-                    <form action="/" method="post">
-                        <label class="label" for="input-email">Adress e-mail</label>
-                        <input type="text" class="input" id="input-email" placeholder="Adress e-mail">
-                    </form>
+                <form class="form" action="/" method="post">
+                    <div class="form__group">
+                        <label class="form__label" for="input-email">Adress e-mail</label>
+                        <input type="text" class="form__input" id="input-email" placeholder="Adress e-mail">
+                    </div>
 
-                </div>
+                    <div class="form__group">
+                        <label class="form__label" for="input-text">Request</label>
+                        <textarea class="form__textarea" name="input-text" id="input-text"
+                                  placeholder="Type your request..."></textarea>
+                    </div>
 
-            </div><!-- contact -->
+                    <div class="text__right">
+                        <a class="button button--moema button--text-thick button--text-upper button--size-s btr"
+                           href="#">SEND</a>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div><!-- contact -->
 
     </div><!-- modal__dialog -->
 </div> <!-- modal -->
